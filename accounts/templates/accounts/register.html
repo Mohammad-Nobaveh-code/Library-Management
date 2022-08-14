@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	{% block content %}
+		<div class="container py-5">
+			<h1>Registraion</h1>
+			<form method="post">
+				{{ form.as_p }}
+				{% csrf_token %}
+				<button class="btn btn-primary" type="submit">Register</button>
+			</form>
+			<p class="text-center">have an account?</p><a href="{% url 'login' %}">login</a>
+		</div>
+	{% endblock %}
+</body>
+</html>

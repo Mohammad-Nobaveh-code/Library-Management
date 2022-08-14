@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+
+{% block title %}Welcome{% endblock %}
+
+
+{% block content %}
+<h1>Welcome {{ form.first_name }}</h1>
+<p>your account has been successfully created. Now hit login to go to the login page!!!</p>
+<a href="{% url 'login' %}">Login</a>
+{% endblock %}
